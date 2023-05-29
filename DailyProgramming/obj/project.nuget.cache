@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "DaXy6Y0mNfIn6RDzLcqSd8WonRWqNqjL+nRBuv8X7NUR844kNth7SFZSuGpHw4MOiJLlj3M+CWSdie4JGon/Bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\T-Gamer\\Desktop\\General\\Me\\Projetos\\C#\\XamarinStudy\\XamarinStudy\\DailyProgramming\\DailyProgramming.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
