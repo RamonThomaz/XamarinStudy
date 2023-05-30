@@ -14,13 +14,15 @@ namespace DailyProgramming.Services.Navigation
             return App.Current.MainPage.Navigation.PopAsync();
         }
 
-        public Task NavigateToAsync<TPageModelBase>(object navigationData = null, bool setRoot = false)
+        public async Task NavigateToAsync<TPageModelBase>(object navigationData = null, bool setRoot = false)
         {
             Page page = PageModelLocator.CreatePageFor(typeof(TPageModelBase));
             if (!setRoot && App.Current.MainPage is NavigationPage navigationPage)
-                return navigationPage.PushAsync(page);
+                await navigationPage.PushAsync(page);
+
             App.Current.MainPage = new NavigationPage(page);
-            return Task.CompletedTask;
+            if (page.BindingContext is PageModelBase pageModelBase)
+                await pageModelBase.InitializeAsync(navigationData);
         }
     }
 }
