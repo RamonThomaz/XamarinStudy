@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DailyProgramming.Services.Navigation
 {
-    internal interface INavigationService
+    public interface INavigationService
     {
         /// <summary>
         /// Navigation method to push onto the navigation stack
