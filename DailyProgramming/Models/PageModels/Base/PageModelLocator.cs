@@ -1,4 +1,5 @@
 ﻿using DailyProgramming.Pages;
+using DailyProgramming.Services.Account;
 using DailyProgramming.Services.Navigation;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace DailyProgramming.Models.PageModels.Base
 
             //Register services
             _container.Register<INavigationService, NavigationService>();
+            _container.Register<IAccountService, AccountService>();
         }
 
         public static T Resolve<T>() where T : class
