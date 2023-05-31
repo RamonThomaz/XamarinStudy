@@ -19,8 +19,8 @@ namespace DailyProgramming.Services.Navigation
             Page page = PageModelLocator.CreatePageFor(typeof(TPageModelBase));
             if (!setRoot && App.Current.MainPage is NavigationPage navigationPage)
                 await navigationPage.PushAsync(page);
-
-            App.Current.MainPage = new NavigationPage(page);
+            else
+                App.Current.MainPage = new NavigationPage(page);
             if (page.BindingContext is PageModelBase pageModelBase)
                 await pageModelBase.InitializeAsync(navigationData);
         }

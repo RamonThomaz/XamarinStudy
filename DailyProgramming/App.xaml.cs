@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DailyProgramming.Models.PageModels;
+using DailyProgramming.Models.PageModels.Base;
+using DailyProgramming.Services.Navigation;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,12 +13,17 @@ namespace DailyProgramming
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
         }
 
-        protected override void OnStart()
+        private Task InitNavigation()
         {
+            INavigationService navigationService = PageModelLocator.Resolve<INavigationService>();
+            return navigationService.NavigateToAsync<LoginPageModel>();
+        }
+
+        protected override async void OnStart()
+        {
+            await InitNavigation();
         }
 
         protected override void OnSleep()
