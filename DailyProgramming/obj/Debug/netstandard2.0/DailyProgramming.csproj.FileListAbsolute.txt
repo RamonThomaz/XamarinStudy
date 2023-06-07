@@ -20,3 +20,4 @@ C:\Users\T-Gamer\Desktop\General\Me\Projetos\C#\XamarinStudy\XamarinStudy\DailyP
 C:\Users\T-Gamer\Desktop\General\Me\Projetos\C#\XamarinStudy\XamarinStudy\DailyProgramming\obj\Debug\netstandard2.0\DailyProgramming.dll
 C:\Users\T-Gamer\Desktop\General\Me\Projetos\C#\XamarinStudy\XamarinStudy\DailyProgramming\obj\Debug\netstandard2.0\refint\DailyProgramming.dll
 C:\Users\T-Gamer\Desktop\General\Me\Projetos\C#\XamarinStudy\XamarinStudy\DailyProgramming\obj\Debug\netstandard2.0\DailyProgramming.pdb
+C:\Users\T-Gamer\Desktop\General\Me\Projetos\C#\XamarinStudy\XamarinStudy\DailyProgramming\obj\Debug\netstandard2.0\Views\Buttons\BindableButton.xaml.g.cs

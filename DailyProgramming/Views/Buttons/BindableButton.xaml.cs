@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace DailyProgramming.Pages
+namespace DailyProgramming.Views.Buttons
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DashboardPage : TabbedPage
+    public partial class BindableButton : Button
     {
-        public DashboardPage()
+        public BindableButton()
         {
             InitializeComponent();
         }

@@ -17,7 +17,7 @@ namespace DailyProgramming.Services.Navigation
         public async Task NavigateToAsync<TPageModelBase>(object navigationData = null, bool setRoot = false)
         {
             Page page = PageModelLocator.CreatePageFor(typeof(TPageModelBase));
-            if (!setRoot && App.Current.MainPage is NavigationPage navigationPage)
+            if (!setRoot && App.Current.MainPage is NavigationPage navigationPage && !(page is TabbedPage tabbedPage))
                 await navigationPage.PushAsync(page);
             else
                 App.Current.MainPage = new NavigationPage(page);

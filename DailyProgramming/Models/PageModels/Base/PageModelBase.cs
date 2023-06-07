@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace DailyProgramming.Models.PageModels.Base
 {
-    public class PageModelBase : BindableObject
+    public class PageModelBase : ExtendableBindableObject
     {
         private string _title;
         public string Title { get => _title; set => SetProperty(ref _title, value); }
@@ -17,16 +17,6 @@ namespace DailyProgramming.Models.PageModels.Base
         public virtual Task InitializeAsync(object navigationData = null)
         {
             return Task.CompletedTask;
-        }
-
-        protected bool SetProperty<T>(ref T propertyRef, T value, [CallerMemberName] string propertyName = null)
-        {
-            if(EqualityComparer<T>.Default.Equals(propertyRef, value))
-                return false;
-
-            propertyRef = value;
-            OnPropertyChanged(propertyName);
-            return true;
         }
     }
 }

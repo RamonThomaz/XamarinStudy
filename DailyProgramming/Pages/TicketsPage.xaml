@@ -1,12 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
+             xmlns:buttons="clr-namespace:DailyProgramming.Views.Buttons"
              x:Class="DailyProgramming.Pages.TicketsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout BackgroundColor="LightBlue" Padding="20, 10, 20, 5">
+                <Label Text="{Binding TotalOpenTickets, StringFormat='Total Open Tickets: {0}'}"/>
+                <Label Text="{Binding TotalTickets, StringFormat='Total Tickets: {0}'}"/>
+                <buttons:BindableButton BindingContext="{Binding NewTicketModel}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nº" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Date" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Status" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+
+            <ListView ItemsSource="{Binding Tickets}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Id}" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Date}" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Status}" HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

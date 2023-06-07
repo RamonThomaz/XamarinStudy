@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("DailyProgramming.Pages.DashboardPage.xaml", "Pages/DashboardPage.xaml", typeof(global::DailyProgramming.Pages.DashboardPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("DailyProgramming.Views.Buttons.BindableButton.xaml", "Views/Buttons/BindableButton.xaml", typeof(global::DailyProgramming.Views.Buttons.BindableButton))]
 
-namespace DailyProgramming.Pages {
+namespace DailyProgramming.Views.Buttons {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\DashboardPage.xaml")]
-    public partial class DashboardPage : global::Xamarin.Forms.TabbedPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Buttons\\BindableButton.xaml")]
+    public partial class BindableButton : global::Xamarin.Forms.Button {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(DashboardPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(BindableButton));
         }
     }
 }
