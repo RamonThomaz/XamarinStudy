@@ -8,8 +8,6 @@ namespace DailyProgramming.Models.PageModels
 {
     public class DashboardPageModel : PageModelBase
     {
-        private NewTicketPageModel _newTicketPageModel;
-        public NewTicketPageModel NewTicketPageModel { get => _newTicketPageModel; set => SetProperty(ref _newTicketPageModel, value); }
         private ProfilePageModel _profilePageModel;
         public ProfilePageModel ProfilePageModel { get => _profilePageModel; set => SetProperty(ref _profilePageModel, value); }
         private SettingsPageModel _settingsPageModel;
@@ -17,9 +15,8 @@ namespace DailyProgramming.Models.PageModels
         private TicketsPageModel _ticketsPageModel;
         public TicketsPageModel TicketsPageModel { get => _ticketsPageModel; set => SetProperty(ref _ticketsPageModel, value); }
 
-        public DashboardPageModel(NewTicketPageModel newTicketPageModel, ProfilePageModel profilePageModel, SettingsPageModel settingsPageModel, TicketsPageModel ticketsPageModel)
-        {
-            NewTicketPageModel = newTicketPageModel;
+        public DashboardPageModel(ProfilePageModel profilePageModel, SettingsPageModel settingsPageModel, TicketsPageModel ticketsPageModel)
+        {;
             ProfilePageModel = profilePageModel;
             SettingsPageModel = settingsPageModel;
             TicketsPageModel = ticketsPageModel;
@@ -28,7 +25,6 @@ namespace DailyProgramming.Models.PageModels
         public override Task InitializeAsync(object navigationData = null)
         {
             return Task.WhenAll(base.InitializeAsync(navigationData),
-                NewTicketPageModel.InitializeAsync(),
                 ProfilePageModel.InitializeAsync(),
                 SettingsPageModel.InitializeAsync(),
                 TicketsPageModel.InitializeAsync());
