@@ -17,7 +17,7 @@ namespace DailyProgramming.Services.Ticket
 
         public Task<ObservableCollection<Models.Ticket>> GetTickets()
         {
-            return Task.FromResult(new ObservableCollection<Models.Ticket>());
+            return Task.FromResult(new ObservableCollection<Models.Ticket>(_tickets));
         }
 
         public Task<bool> RegisterTicket(Models.Ticket ticket)

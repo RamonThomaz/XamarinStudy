@@ -1,8 +1,11 @@
 ﻿using DailyProgramming.Models.Enums;
 using DailyProgramming.Models.PageModels.Base;
+using DailyProgramming.Services.Ticket;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DailyProgramming.Models.PageModels
 {
@@ -25,5 +28,20 @@ namespace DailyProgramming.Models.PageModels
 
         private string _personInChargeOf;
         public string PersonInChargeOf { get => _personInChargeOf; set => SetProperty(ref _personInChargeOf, value); }
+
+        private ITicketService _ticketService;
+
+        public NewTicketPageModel(ITicketService ticketService)
+        {
+            _ticketService = ticketService;
+        }
+
+        public override Task InitializeAsync(object navigationData = null)
+        {
+            var tickets = _ticketService.GetTickets().Result;
+            if(tickets != null &&  tickets.Count > 0)
+                Id = _ticketService.GetTickets().Result.First().Id;
+            return base.InitializeAsync(navigationData);
+        }
     }
 }

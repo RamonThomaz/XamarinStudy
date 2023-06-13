@@ -4,7 +4,8 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
-             xmlns:buttons="clr-namespace:DailyProgramming.Views.Buttons"
+             xmlns:buttons="clr-namespace:DailyProgramming.Views.Buttons" 
+             xmlns:pagemodels="clr-namespace:DailyProgramming.Models.PageModels" x:DataType="pagemodels:TicketsPageModel"
              x:Class="DailyProgramming.Pages.TicketsPage">
     <ContentPage.Content>
         <StackLayout>
@@ -24,9 +25,9 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Id}" HorizontalOptions="CenterAndExpand"/>
-                                <Label Text="{Binding Date}" HorizontalOptions="CenterAndExpand"/>
-                                <Label Text="{Binding Status}" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Id" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Date" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Status" HorizontalOptions="CenterAndExpand"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
